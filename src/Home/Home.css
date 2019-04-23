@@ -1,0 +1,33 @@
+.bouton_list {
+    border: 1px solid #4CAF50;
+    border-radius: 30px;
+    background-color: #4CAF50;
+    text-decoration: none;
+    color: white;
+    padding: 8px 10px;
+    font-size: 3vw;
+}
+
+.bouton_list:hover {
+    border: 1px solid #347a37;
+    background-color: #347a37;
+}
+
+.dispos_center {
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    height: 200px;
+    position: relative;
+}
+
+.vertical-center {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

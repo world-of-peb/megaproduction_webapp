@@ -1,0 +1,46 @@
+.TopBarMenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  /*position: fixed;*/
+  top: 0;
+  width: 100%;
+}
+
+.ElementMenu {
+  float: left;
+}
+
+.lienMenu {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+}
+
+.bouton_list:hover {
+  border: 1px solid #347a37;
+  background-color: #347a37;
+}
+
+.lienMenu:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.active:hover {
+  background-color: #347a37;
+}
+
+/*#E8AF0C*/
+
+.header {
+  margin-bottom: 2px;
+}
