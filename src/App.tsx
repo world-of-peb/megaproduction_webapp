@@ -12,7 +12,6 @@ import Header from "./Header/Header";
           }/>
  */
 
-
 class App extends Component {
   /*constructor(props, context) {
     super(props, context);
@@ -33,7 +32,10 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/home" component={Home} />
             <Route path="/casting" component={CastingList} />
-            <Route path="/casting/:name" component={CastingDetails} />
+            {//<Route path="/casting/:nom" render={({ match }) => (<CastingDetails />)} />
+           // <Route exact path="/casting/:id" component={(props) => <CastingDetails casting={match.params.casting} {...props} />} />
+            }
+            <Route path="/:id/:nom" component={CastingDetails} />
 
           </Switch>
         </div>
@@ -42,4 +44,4 @@ class App extends Component {
   }
 }
 export default App;
-            //<Route path=":id/:title" render={({ match }) => ( <InfoCompetence id={match.params.id} />  )} />
+//<Route path=":id/:title" render={({ match }) => ( <InfoCompetence id={match.params.id} />  )} />

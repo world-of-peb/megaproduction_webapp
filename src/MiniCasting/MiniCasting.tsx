@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+
 import './MiniCasting.css';
+import { casting } from "../Classe/Classe"
 
 export default class CastingList extends Component<MiniCasting> {
     /*constructor(props, context) {
@@ -9,23 +12,25 @@ export default class CastingList extends Component<MiniCasting> {
     public render() {
 
         return (
-            <div className="Competence">
-                {// <Link to={`/${this.props.id}/${this.props.title}`} id={this.props.title}> </Link>
-                }
-                <div className="Fond"></div>
-                <div className="Description">
-                    <div>{this.props.title}</div>
-                    <div>{this.props.comment}</div>
-                </div>
+            <div className="MiniCasting">
+                <Link className="blockCasting" to={`/casting/${this.props.casting.nom}`} >
+                    <div >
+                        <div className="Fond">
+                            <img src="" alt="" />
+                        </div>
+                        <div className="Description">
+                            <div>{this.props.casting.nom}</div>
+                            <div>{this.props.casting.description}</div>
+                        </div>
+                    </div>
+                </Link>
 
             </div >
         );
+
     }
 }
 
 interface MiniCasting {
-    //TODO: implemente l'interface
-    id: number
-    title: string;
-    comment: string;
+    casting: casting,
 }

@@ -1,7 +1,7 @@
 export interface casting {
     id: number,
-    nom: string,
-    nana: string
+    nom?: string,
+    description?: string
 }
 
 export interface offre {
