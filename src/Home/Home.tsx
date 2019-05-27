@@ -42,9 +42,9 @@ export default class Home extends Component {
             </NavLink>
           </div>
           <div><ul>
-            { /* this.state.persons.map((person:any) => <li>{person.name}</li>) */
-          this.state.persons.endorsement
-          }
+            { /* this.state.persons.map((person:any) => <li>{person.name}</li>) 
+          this.state.persons.endorsement*/
+            }
           </ul>
           </div>
         </div>
