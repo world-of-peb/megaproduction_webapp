@@ -1,0 +1,32 @@
+.flexDisp{
+    display : flex;
+}
+
+
+.listComp{
+    width: 315px ;
+    height: 333px;
+    margin : 10px;
+    overflow: auto;
+    white-space: wrap;
+}
+
+.textDisp{
+    display: block;
+    margin : 5px;
+}
+
+.MiniCasting {
+    display: inline-block;
+    margin: 2px;
+    width: 300px;
+    height: 75px;
+    text-decoration: none;
+    padding: 2px;
+    overflow: hidden;
+}
+
+.titreCast, .descriptionCast{
+    padding-left : 12px;
+}
+

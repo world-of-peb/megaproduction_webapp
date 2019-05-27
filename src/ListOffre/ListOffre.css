@@ -1,0 +1,7 @@
+.listOffre{
+    width: 315px ;
+    height: 333px;
+    margin : 10px;
+    overflow: auto;
+    white-space: wrap;
+}

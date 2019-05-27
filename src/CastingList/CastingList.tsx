@@ -1,30 +1,52 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './CastingList.css';
 import { casting } from '../Classe/Classe';
 import MiniCasting from '../MiniCasting/MiniCasting';
 
-export default class CastingList extends Component {
-  /*constructor(props, context) {
-    super(props, context);
-  }*/
+interface castState {
+  //items: Dictionary<string>;
+  listCasting: casting[];
 
-  castingList: casting[] = [
-    { id: 1, nom: "Casting 1", description: "Lorem Ipsum" },
-    { id: 2, nom: "Casting 2", description: "Lorem Ipsum" },
-    { id: 3, nom: "Casting 3", description: "Lorem Ipsum" },
-  ];
+}
 
+interface castProps {
+  
+}
+
+
+export default class CastingList extends React.Component<castProps, castState> {
+  constructor(props: castProps) {
+    super(props);
+
+    this.state = {
+      listCasting: []
+
+    };
+  }
+
+
+  componentDidMount() {
+    let url = `http://172.16.2.69/api/Casting`;
+    axios.get(url)
+      .then((res: any) => {
+        const datas = res.data;
+        this.setState(state => ({ listCasting: datas }));
+
+      })
+  }
 
 
   public render() {
 
-    let miniCastings: React.ReactNode[] = [];
-    for (let i = 0; i < this.castingList.length; i++) {
-      miniCastings.push(
+    let miniCasting: React.ReactNode[] = [];
+    for (let i = 0; i < this.state.listCasting.length; i++) {
+      miniCasting.push(
         <MiniCasting
-          casting={this.castingList[i]}
+          casting={this.state.listCasting[i]}
         />)
     }; // et tu places ton {skills} dans l'html
+
 
 
     return (
@@ -32,7 +54,7 @@ export default class CastingList extends Component {
         <div className="">
           <div>
 
-            {miniCastings}
+            {miniCasting}
 
           </div>
 
